@@ -42,7 +42,7 @@ Por favor selecione S para SIM ou N para NAO.
 ''')
 
     if calc_again.upper() == 'S':
-        calculate()
+        calculadora()
     elif calc_again.upper() == 'N':
         print('ADEUS :) ')
     else:
