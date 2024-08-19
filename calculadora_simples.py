@@ -1,17 +1,17 @@
-def calculadora():#função para iniciar a calculadora pedindo para o usuário selecionar a operação
-    operacao = input('''
-Por favor escolha o tipo de operação:
-+ Adição
-- Subtração
-* Multiplicação
-/ divisão
-''')
+def calculadora():
+    
+    numero_1 = float(input("insira o primeiro número: "))
 
-#variáveis com a entrada do usuário/ números a serem calculados
-    numero_1 = int(input('Insira o primeiro numero: '))
-    numero_2 = int(input('Insira o segundo numero: '))
+    operacao = input(
+      '''escolha a operação a ser utilizada:
+      + somar
+      - subtrair
+      * multiplicar
+      / dividir
+      ''')
+    
+    numero_2 = float(input("insira o segundo número: "))
 
-###################cadeia de cálculos####################
     if operacao == '+':
         print('{} + {} = '.format(numero_1, numero_2))
         print(numero_1 + numero_2)
@@ -30,22 +30,21 @@ Por favor escolha o tipo de operação:
 
     else:
         print('você escolheu um valor inválido, reinicie o programa.')
+    
+    reiniciar()
 
-        
-########adiciona Again()#####
-    again()
-
-def again():
-    calc_again = input('''
-Voce quer calcular de novo?
-Por favor selecione S para SIM ou N para NAO.
-''')
-
-    if calc_again.upper() == 'S':
+def reiniciar():
+    reinicio = input('''quer calcular de novo?
+                     pressione 'S' para SIM
+                     pressiona 'N' para NÃO
+                     ''')
+    if reinicio == 's':
         calculadora()
-    elif calc_again.upper() == 'N':
-        print('ADEUS :) ')
+
+    elif reinicio == 'n':
+        print("Adeus")
+
     else:
-        again()
+        reiniciar()
 
 calculadora()
